@@ -9,16 +9,24 @@
     <title>personal</title>
   </head>
   <body ng-controller="mainCtrl">
-    <div ng-model="test">
-      {{test}}
+    <div class="menu">
+              <a class="hometab" ui-sref="home">Home</a>
+              <a class="products" ui-sref="products">Products</a>
+              <a class="contact" ui-sref="contact">Contact</a>
+              <a class="admin" ui-sref="admin">Admin</a>
 
-    </div>
+          </div>
 
+    <ui-view></ui-view>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/adminctrl.js"></script>
+    <script type="text/javascript" src="js/productctrl.js"></script>
+
     <script type="text/javascript" src="js/service.js"></script>
   </body>
 </html>
