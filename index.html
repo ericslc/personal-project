@@ -9,14 +9,29 @@
     <title>personal</title>
   </head>
   <body ng-controller="mainCtrl">
-    <div class="menu">
-              <a class="hometab" ui-sref="home">Home</a>
-              <a class="products" ui-sref="products">Products</a>
-              <a class="contact" ui-sref="contact">Contact</a>
-              <a class="admin" ui-sref="admin">Admin</a>
-
-          </div>
-
+    <div id="cssmenu">
+    <ul>
+       <li><a href="home"><span>Home</span></a></li>
+       <li class="active has-sub"><a href="products"><span>Products</span></a>
+          <ul>
+             <li class="has-sub"><a href="#"><span>Product 1</span></a>
+                <ul>
+                   <li><a href="#"><span>Sub Product</span></a></li>
+                   <li class="last"><a href="#"><span>Sub Product</span></a></li>
+                </ul>
+             </li>
+             <li class="has-sub"><a href="#"><span>Product 2</span></a>
+                <ul>
+                   <li><a href="#"><span>Sub Product</span></a></li>
+                   <li class="last"><a href="#"><span>Sub Product</span></a></li>
+                </ul>
+             </li>
+          </ul>
+       </li>
+       <li><a href="contact"><span>contact</span></a></li>
+       <li class="admin"><a href="admin"><span>Admin</span></a></li>
+    </ul>
+    </div>
     <ui-view></ui-view>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
@@ -26,7 +41,6 @@
     <script type="text/javascript" src="js/controller.js"></script>
     <script type="text/javascript" src="js/adminctrl.js"></script>
     <script type="text/javascript" src="js/productctrl.js"></script>
-
     <script type="text/javascript" src="js/service.js"></script>
   </body>
 </html>
