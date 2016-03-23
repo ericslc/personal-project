@@ -1,4 +1,8 @@
-<div ng-model="test">
-  {{test}}
-
+<div ng-repeat="product in product">
+  <div >
+        <h3>{{product.Name}} - ${{product.Price}}</h3>
+</div>
+<div ng-repeat="gear in gear">
+  {{gear.Name}}
+</div>
 </div>

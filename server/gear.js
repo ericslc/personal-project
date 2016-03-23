@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var productSchema = new Schema({
+var gearSchema = new Schema({
   Name: {
     type: String,
     Unique: true,
@@ -9,6 +9,7 @@ var productSchema = new Schema({
     index: true
   },
 
+    
   Description: {
     type: String,
     required: true
@@ -18,12 +19,6 @@ var productSchema = new Schema({
     required: true,
     min: 0
   },
-  Rent: {
-    type: Number,
-    required: false
 
-  }
-
-});
-
-module.exports= mongoose.model("Productinfo", productSchema);
+})
+module.exports= mongoose.model("Gear", gearSchema);
