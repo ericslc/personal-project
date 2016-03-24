@@ -32,17 +32,31 @@ angular.module('myApp').config(function ($stateProvider, $urlRouterProvider){
     templateUrl: 'views/sales.html',
 
   })
-  .state('contact',{
-    url: '/contact',
-    controller: 'mainCtrl',
-    templateUrl: '/views/contact.html'
+  .state('cart',{
+    url: '/cart',
+    controller: 'productCtrl',
+    templateUrl: '/views/cart.html'
   })
   .state('admin',{
     url: '/admin',
     controller: 'adminCtrl',
     templateUrl: '/views/admin.html'
   })
-
+  .state('users',{
+    url: '/users',
+    controller: 'adminCtrl',
+    templateUrl: '/views/users.html'
+  })
+  .state('inventory',{
+    url: '/inventory',
+    controller: 'productCtrl',
+    templateUrl: '/views/inventory.html'
+  })
+  .state('signup', {
+    url: '/signup',
+    controller: 'adminCtrl',
+    templateUrl: '/views/signup.html'
+  })
 
   $urlRouterProvider.otherwise('/home');
 

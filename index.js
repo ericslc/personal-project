@@ -139,7 +139,7 @@ app.post('/api/users', function(req, res){
 });
 
 
-app.put('api/users', function(req, res){
+app.put('/api/users', function(req, res){
   User.findByIdAndUpdate(req.query.id, req.body, function(err, user){
 	    if(err){
 	      return res.status(500).send(err);
@@ -152,7 +152,7 @@ app.put('api/users', function(req, res){
 });
 
 
-app.delete('api/users', function(req, res){
+app.delete('/api/users', function(req, res){
   if(!req.query.id){
 		return res.status(400).send('id query needed');
 	};

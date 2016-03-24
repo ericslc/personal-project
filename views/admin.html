@@ -1,5 +1,8 @@
-<div>
 
-{{user}}
+<div ng-repeat="user in user">
+<h4>{{user.Name}} - {{user.Email}}</h4>
 
+</div>
+<div ng-repeat="product in product">
+  <h4>{{product.Name}}-${{product.Price}}-{{product.Description}}</h4>
 </div>

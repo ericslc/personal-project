@@ -4,23 +4,26 @@ angular.module('myApp').service('userSvc', function($http){
     return $http({
       method: 'GET',
       url: '/api/users'
-    }).then(function(data){
-      return data.data;
-    },function(err){
-      return err;
-    });
+    })
   };
 
   this.addUser = function(){
     return $http.post('/api/users', user);
   };
 
-  this.updateUser = function(){
+  this.updateUser = function(id){
     return $http.put('/api/users' + id, update);
   };
 
-  this.deleteUser = function(){
-    return $http.delete('/api/users' + id);
-  };
+  this.deleteUser = function(id){
+    return $http.delete('/api/users?id='+ id);
+}
+  this.getUserInfo = function() {
+  return $http.get('/api/user/' + id);
+    console.log(response);
+};
+this.newUser = function(user) {
+  userService.newUser(user);
+}
 
 })

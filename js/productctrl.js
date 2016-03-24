@@ -2,7 +2,6 @@ angular.module('myApp').controller('productCtrl', function($scope, productSvc, g
   $scope.getProduct = function() {
      productSvc.getProducts().then(function(response) {
        $scope.product = response.data;
-       console.log($scope.product)
 
      })
     };
@@ -11,7 +10,6 @@ angular.module('myApp').controller('productCtrl', function($scope, productSvc, g
   $scope.getGear = function() {
     gearSvc.getGear().then(function(response){
       $scope.gear = response.data;
-      console.log($scope.gear)
     })
   };
 

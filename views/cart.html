@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Cart</h1>
+  <div ng-repeat="product in cart.userCart" class="row">
+    <div class="inline col-md-4">
+      <h4>{{product.name}} - {{product.price}}</h4>
+
+
+      <p>
+        {{product.description}}
+      </p>
+    </div>
+
+    {{cart.userCart}}
+
+
+  </div>
+</div>

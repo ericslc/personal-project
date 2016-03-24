@@ -1,29 +1,13 @@
 var mongoose = require('mongoose');
+var ObjectId = mongoose.Schema.Types.ObjectId;
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-  Name: {
-    type: String,
-    Unique: true,
-    Required: true,
-    index: true
-  },
-  Street: {
-    type: String,
-    Required: true,
-  },
-  City: {
-    type: String,
-    required: true
-  },
-  State:  {
-    type: String,
-    required: true
-  },
-  Zip: {
-    type: Number,
-    required: true
-  }
+  Name: {type: String, Required: true, index: true },
+  Email: {type: String, required: true, unique: true},
+  password: {type: String, required: true},
+  Cart: {type: String, ref: "Cart"}
+
 });
 
-module.exports= mongoose.model("users", userSchema);
+module.exports= mongoose.model("User", userSchema);

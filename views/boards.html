@@ -1,7 +1,5 @@
-<div>
-
-<img src="http://www.soulrsurfboards.com/components/com_mijoshop/opencart/image/cache/data/SUP/11-6-SUP-Woody-2-350x400.jpg" />
 <div ng-repeat="product in product">
+  <div class="inline col-md-4">
 
   <h4 class="bnames"> {{product.Name}} </h4>
 
@@ -10,6 +8,11 @@
   <br/>
   <p class="price"> ${{product.Price}}</p>
   <br/>
-
+  <div class="inline col-md-4">
+    <div id="menu" ng-click="addToCart" class="btn btn-primary">
+      Add to cart
+    </div>
+  </div>
 </div>
+<img src="http://www.soulrsurfboards.com/components/com_mijoshop/opencart/image/cache/data/SUP/11-6-SUP-Woody-2-350x400.jpg" />
 </div>
